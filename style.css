@@ -1,0 +1,715 @@
+
+body {
+    /* background: linear-gradient(135deg, #000000, #8b0000) */
+    background: linear-gradient(135deg, #000000, #6b0000)
+
+    !important;
+    color: white !important;
+    overflow-x: hidden;
+   
+  }
+
+/* ---------------- NAVBAR BASE ---------------- */
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0); /* Transparent */
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  max-width: 100%;
+  height: fit-content;
+  width: 100vw;
+
+}
+
+
+@media (max-width: 767.98px) {
+  .navbar-custom {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+  }
+}
+
+/* Background on scroll */
+.navbar-scrolled {
+  transition: 0.5s ease-in;
+  background-color: rgba(0, 0, 0, 0.105);
+}
+
+/* Typography & Link Colors */
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+  color: white;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .dropdown-menu a:hover {
+  color: #ff0800;
+  transition: color 0.4s ease-in-out;
+}
+
+.navbar-custom .nav-link.active {
+  color: #ff0800 !important;
+}
+
+/* ---------------- DROPDOWN ---------------- */
+.navbar-custom .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border: none;
+  pointer-events: none;
+}
+
+.navbar-custom .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .dropdown-menu .dropdown-item:hover {
+  color: #ff0800;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.nav-item > .btn {
+  background: rgb(24, 182, 235);
+  border: none;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.nav-item > .btn:hover {
+  background: rgb(24, 154, 190);
+  transition: 0.2s ease-in-out;
+}
+
+/* Small screen button */
+#smallaction {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* ---------------- MISC ---------------- */
+body {
+  padding-top: 70px;
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+
+/* Optional: Fix for container spacing */
+.container-fluid {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  
+}
+.col-lg-6{
+  padding: 5%;
+}
+@media(max-width:700px){
+  *{
+    text-align: center;
+  }
+  .col-lg-6{
+    display: grid;
+    place-items: center;
+  }
+.container-fluid{
+
+  overflow: hidden;
+}
+}
+/* Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger link */
+.dropdown > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.dropdown > a:hover {
+  color: #ff0800;
+  transition: 0.4s ease-in-out;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s;
+}
+
+.dropdown-content a:hover {
+  color: #ff0800;
+}
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+#proimg > img {
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 50%;
+  border: 2px solid #ff0800;
+  box-shadow: 
+      30px 0 50px rgba(0, 0, 0, 0.9),  /* darker and larger black shadow on the right */
+      0 0 25px rgba(255, 8, 0, 0.8), 
+      0 0 50px rgba(255, 8, 0, 0.6), 
+      0 0 75px rgba(255, 8, 0, 0.4); 
+  animation: glow 2s ease-in-out infinite;
+  margin-top: 50px;
+
+}
+@keyframes glow {
+  0% {
+    box-shadow:
+      35px 0 60px rgba(0, 0, 0, 0.95), /* more intense dark shadow on the right */
+      0 0 30px rgba(255, 8, 0, 0.9),
+      0 0 60px rgba(255, 8, 0, 0.7),
+      0 0 90px rgba(255, 8, 0, 0.5);
+  }
+  50% {
+    box-shadow:
+      40px 0 85px rgba(0, 0, 0, 1), /* deeper right-side shadow */
+      0 0 40px rgba(255, 8, 0, 1),
+      0 0 100px rgba(255, 8, 0, 0.9),
+      0 0 150px rgba(255, 8, 0, 0.7);
+  }
+  100% {
+    box-shadow:
+      35px 0 60px rgba(0, 0, 0, 0.95),
+      0 0 30px rgba(255, 8, 0, 0.9),
+      0 0 60px rgba(255, 8, 0, 0.7),
+      0 0 90px rgba(255, 8, 0, 0.5);
+  }
+}
+
+
+@media (max-width: 600px) {
+  #proimg > img {
+      box-shadow:
+          20px 0 30px rgba(0, 0, 0, 0.9),  /* darker and larger black shadow on the right */
+          0 0 10px rgba(255, 8, 0, 0.6),
+          0 0 20px rgba(255, 8, 0, 0.4),
+          0 0 30px rgba(255, 50, 50, 0.3);
+      animation: glow-sm 2s ease-in-out infinite;
+  }
+
+  @keyframes glow-sm {
+      0% {
+          box-shadow:
+              20px 0 30px rgba(0, 0, 0, 0.9), /* darker and larger black shadow on the right */
+              0 0 10px rgba(255, 8, 0, 0.6),
+              0 0 20px rgba(255, 8, 0, 0.4),
+              0 0 30px rgba(255, 50, 50, 0.3);
+      }
+      50% {
+          box-shadow:
+              25px 0 50px rgba(0, 0, 0, 1), /* stronger dark right side */
+              0 0 15px rgba(255, 8, 0, 0.8),
+              0 0 30px rgba(255, 8, 0, 0.5),
+              0 0 45px rgba(255, 50, 50, 0.4);
+      }
+      100% {
+          box-shadow:
+              20px 0 30px rgba(0, 0, 0, 0.9), /* darker and larger black shadow on the right */
+              0 0 10px rgba(255, 8, 0, 0.6),
+              0 0 20px rgba(255, 8, 0, 0.4),
+              0 0 30px rgba(255, 50, 50, 0.3);
+      }
+  }
+}
+
+
+.container>.row>.col-lg-6 {
+  display: grid;
+  place-items: center;
+}
+
+#skyblue {
+  color: #ff0800;
+}
+
+h2.autotype {
+  font-weight: bold;
+}
+
+.autotype span.cyan {
+  color: #ff0800;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 20ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 40px;
+  color: #ff0800;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+table {
+  font-size: 15px;
+  color: #ff0800;
+  background: none !important;
+}
+
+#specialitiesTable {
+  transform: translateX(30px);
+}
+
+#naming, #typingEffect {
+  transform: translateX(-120px);
+}
+
+@media(max-width:760px) {
+  #naming, #typingEffect {
+      transform: translateX(0px);
+  }
+  #specialitiesTable {
+      width: 200px;
+      margin-bottom: 20px;
+  }
+}
+
+.cyancolor {
+  background: #ff0800 !important;
+  color: #000 !important;
+}
+
+.c1 {
+  height: fit-content;
+  padding-bottom: 90px;
+  padding-top: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navtogg {
+  background: #ff0800;
+}
+
+.name {
+  font-size: 90px;
+}
+
+@media (max-width: 768px) {
+  .name {
+      font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+      font-size: 30px;
+  }
+}
+
+.c2 {
+  display: grid;
+  place-items: center;
+  padding: 6% 0%;
+  overflow-x: hidden;
+}
+
+.scroll-container-wrapper {
+  overflow: hidden;
+  width: 100%;
+  /* background-color: black; */
+}
+
+.scroll-container {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.country-card {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgb(65, 64, 64);
+  display: grid;
+  place-items: center;
+
+
+transition: transform 0.6s ease;
+transform-style: preserve-3d;
+}
+
+.country-card:hover {
+transform: rotateY(180deg);
+}
+.country-card img {
+  width: auto;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.wrappernames {
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgb(55, 54, 54);
+  margin-bottom: 50px;
+}
+
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+.wrappernames>.scroll-container>.country-card {
+  height: 30px;
+  border: none;
+  color: white;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>> c3 */
+.c3{
+    height:fit-content;
+    box-sizing: border-box;
+    padding:2% 10%;
+}
+/* General container styling */
+
+
+  
+  /* Spacing for <br> tags - optional, can be removed if not needed */
+  BR {
+    margin-bottom: 20px;
+  }
+  
+  /* Row and column layout */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .col-lg-8 {
+    height: 200px;
+   width: 67%;
+    padding: 15px;
+    background-color:#ff0800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
+  }
+  
+  @media(max-width:800px){
+    .col-lg-8 {
+       text-align: center;
+      }
+      
+  }
+ 
+  .col-lg-4 {
+    width: 30%;
+    height: 190px;
+    padding: 15px;
+    background-color:#ff0800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
+  }
+  
+  .col-lg-8>a{
+    text-decoration: none;
+    color: black;
+  }
+  .col-lg-4>a{
+    text-decoration: none;
+    color: black;
+  }
+  .col-lg-4 > img {
+    height: 100%;
+    animation: spin 2s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+ 
+
+  @media (max-width: 768px) {
+    .col-lg-8, .col-lg-4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+body {
+  font-family: 'Baumans', sans-serif;
+}
+
+ /* Create a div for the custom cursor */
+
+
+ /* >>>>>>>>>>>>c4 */
+
+ .c4{
+    padding: 5% 10%
+ }
+ form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background: none; /* Transparent background */
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+  /* General fade-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(150px); /* Start position (a bit further down) */
+    transition: opacity 0.5s ease, transform 1s ease;
+  }
+  
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+  /* General fade-down animation */
+  .fade-down {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.8); /* Start higher and smaller */
+    transition: opacity 1s ease, transform 0.5s ease;
+  }
+  
+  .fade-down.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Final position and size */
+  }
+  
+  /* Fade-up slow animation */
+  .fade-up-slow {
+    opacity: 0;
+    transform: translateY(150px); /* Start position (below) */
+    transition: opacity 1s ease 0.3s, transform 2s ease 0.3s; /* 1 second duration with 0.3s delay */
+  }
+  
+  .fade-up-slow.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  @media(max-width:900px)
+  {
+    /* Fade-left animation */
+  .fade-left {
+    opacity: 0;
+    transform: translateX(-200px); /* Start position (left) */
+    transition: opacity 2s ease 0.4s, transform 2s ease 0.4s;
+  }
+  
+  .fade-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+  
+  /* Fade-right animation */
+  .fade-right {
+    opacity: 0;
+    transform: translateX(200px); /* Start position (right) */
+    transition: opacity 2.5s ease 0.4s, transform 2.5s ease 0.4s;
+  }
+  
+  .fade-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+  
+  }
+  
+  /* Fade-left animation */
+  .fade-left {
+    opacity: 0;
+    transform: translateX(-200px); /* Start position (left) */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+  
+  /* Fade-right animation */
+  .fade-right {
+    opacity: 0;
+    transform: translateX(200px); /* Start position (right) */
+    transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
+  }
+  
+  .fade-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+  
+  /* Fade-up 1 (faster) */
+  .fade-up-1 {
+    opacity: 0;
+    transform: translateY(10px); /* Slight start position */
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0s; /* Start immediately */
+  }
+  
+  .fade-up-1.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+  .fade-up-2 {
+    opacity: 0;
+    transform: translateY(60px); /* Lower start position */
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.3s; /* Delayed by 0.3s */
+  }
+  
+  .fade-up-2.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+  .fade-up-3 {
+    opacity: 0;
+    transform: translateY(90px); /* Much lower start position */
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.6s; /* Delayed by 0.6s */
+  }
+  
+  .fade-up-3.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  /* .container{
+    overflow-x: hidden !important;
+  }
+  .container-fluid{
+    overflow-x: hidden !important;
+  }
+  */
+
+  /* >>>>>>>>>>>>> FIX FOR SMALL SCREEN OVERFLOW <<<<<<<<<<<<< */
