@@ -345,7 +345,7 @@ table {
 
 .c1 {
   height:fit-content;
- 
+ padding-top:10px
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
