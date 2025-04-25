@@ -99,18 +99,12 @@ body {
 
 /* ---------------- MISC ---------------- */
 body {
-  padding-top: 70px;
-  background: #f8f9fa;
+  
+  background:black;
   overflow-x: hidden;
 }
 
-/* Optional: Fix for container spacing */
-.container-fluid {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 
-  
-}
 .col-lg-6{
   padding: 5%;
 }
@@ -240,8 +234,8 @@ body {
           box-shadow:
               20px 0 30px rgba(0, 0, 0, 0.9), /* darker and larger black shadow on the right */
               0 0 10px rgba(255, 8, 0, 0.6),
-              0 0 20px rgba(255, 8, 0, 0.4),
-              0 0 30px rgba(255, 50, 50, 0.3);
+              0 0 30px rgba(255, 8, 0, 0.4),
+              0 0 40px rgba(255, 50, 50, 0.3);
       }
       50% {
           box-shadow:
@@ -254,8 +248,8 @@ body {
           box-shadow:
               20px 0 30px rgba(0, 0, 0, 0.9), /* darker and larger black shadow on the right */
               0 0 10px rgba(255, 8, 0, 0.6),
-              0 0 20px rgba(255, 8, 0, 0.4),
-              0 0 30px rgba(255, 50, 50, 0.3);
+              0 0 30px rgba(255, 8, 0, 0.4),
+              0 0 40px rgba(255, 50, 50, 0.3);
       }
   }
 }
@@ -350,9 +344,9 @@ table {
 }
 
 .c1 {
-  height: fit-content;
-  padding-bottom: 90px;
-  padding-top: 80px;
+  height:fit-content;
+  padding-bottom: 30px;
+  padding-top: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -379,7 +373,7 @@ table {
 .c2 {
   display: grid;
   place-items: center;
-  padding: 6% 0%;
+  padding: 4% 0%;
   overflow-x: hidden;
 }
 
@@ -704,12 +698,4 @@ body {
     opacity: 1;
     transform: translateY(0); /* Final position */
   }
-  /* .container{
-    overflow-x: hidden !important;
-  }
-  .container-fluid{
-    overflow-x: hidden !important;
-  }
-  */
-
-  /* >>>>>>>>>>>>> FIX FOR SMALL SCREEN OVERFLOW <<<<<<<<<<<<< */
+ 
