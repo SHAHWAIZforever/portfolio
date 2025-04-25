@@ -698,3 +698,8 @@ body {
     transform: translateY(0); /* Final position */
   }
  
+@media (max-width: 768px) {
+  .dropdown{
+    display: none;
+  }
+}
